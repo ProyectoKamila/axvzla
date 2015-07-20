@@ -1,0 +1,1582 @@
+@charset "utf-8";
+
+
+
+/* LOADER */
+
+	#loaderProgress {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 50;
+		width: 100%;
+		height: 11px;
+		background: url(../images/encyclopedy/load-bg.png) repeat-x;
+	}
+	
+	#loaderProgress .progressBar {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 51;
+		width: 0%;
+		height: 11px;
+		background: url(../images/encyclopedy/load-progress.png) no-repeat top right;
+	}
+/* /LOADER */
+
+
+
+/* HOMEPAGE */
+
+	#homepage {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+	
+	#homepage a {
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50%;
+		height: 100%;
+		text-decoration: none;
+	}
+	
+	#homepage a.right {
+		left: auto;
+		right: 0;
+	}
+	
+	#homepage a	strong {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		height: 140px;
+		margin-top: -70px;
+		line-height: 140px;
+		font-family: 'komu-a';
+		font-size: 130px;
+		font-weight: normal;
+		text-align: center;
+		color: #e3030c;
+		
+		-moz-transition-duration: 350ms;
+		-webkit-transition-duration: 350ms;
+		-o-transition-duration: 350ms;
+		transition-duration: 350ms;
+		
+		-moz-transition-property: color;
+		-webkit-transition-property: color;
+		-o-transition-property: color;
+		transition-property: color;
+	}
+	#homepage a:hover	strong {
+		color: #fff;
+	}
+	
+	#homepage a .bg {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		
+		width: 100%;
+		height: 100%;
+		
+		-moz-transition-duration: 350ms;
+		-webkit-transition-duration: 350ms;
+		-o-transition-duration: 350ms;
+		transition-duration: 350ms;
+		
+		-moz-transition-property: opacity;
+		-webkit-transition-property: opacity;
+		-o-transition-property: opacity;
+		transition-property: opacity;
+	}
+	#homepage a:hover .bg {
+		opacity: 1;
+		filter: alpha(opacity=100);
+	}
+	
+	#homepage a .shadow {
+		display: block;
+		position: absolute;
+		top: 0;
+		z-index: 5;
+		width: 30px;
+		height: 100%;
+		
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+	
+	#homepage a.left .shadow {
+		right: 0;
+		background: url(../images/homepage/left-shadow.png) repeat-y;
+	}
+	
+	#homepage a.right .shadow {
+		left: 0;
+		background: url(../images/homepage/right-shadow.png) repeat-y;
+	}
+	
+	#homepage a.left img {
+		height: 100%;
+	}
+	
+	#homepage a.right img {
+		width: 100%;
+	}
+	
+	#homepage a .bg img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+	
+	#homepage a.right .bg img {
+		-moz-transition-property: top;
+		-webkit-transition-property: top;
+		-o-transition-property: top;
+		transition-property: top;
+	}
+	
+	#homepage a:hover .bg img,
+	#homepage a:hover .shadow {
+		opacity: 1;
+		filter: alpha(opacity=100);
+	}
+	
+	#homepage a span.desc {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		height: 40px;
+		margin-top: 70px;
+		line-height: 30px;
+		font-family: 'myriad-pro';
+		font-size: 24px;
+		text-align: center;
+	}
+
+/* /HOMEPAGE */
+
+
+
+/* PAGE */
+
+	#navigation {
+		top: 0;
+		background: none;
+	}
+	
+	#navigation .bg {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../images/navigation/bg.png) repeat;
+	}
+	
+	#navigation a span {
+		display: inline-block;
+	}
+	
+	#navigation a.active span {
+		opacity: 0.99;
+	}
+	
+	.detail #navigation .left {
+		padding-left: 5px;
+	}
+
+	#detailPage .page {
+		position: relative;
+		width: 100%;
+	}
+	
+	#detailPage .page .buttonPlay,
+	#detailPage .page .buttonMute {
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		top: 55%;
+		left: 50%;
+		width: 71px;
+		height: 71px;
+		margin-left: -35px;
+		text-indent: 110%;
+	}
+	
+	#detailPage .page .hide {
+		display: none !important;
+	}
+	
+	#detailPage .page .copyright {
+		position: absolute;
+		bottom : 40px;
+		left: 35px;
+		z-index: 10;
+		width: 61px;
+		height: 61px;
+	}
+	
+	#detailPage .page .copyright a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 15;
+		display: block;
+		width: 72px;
+		height: 72px;
+	}
+	
+	#detailPage .page .copyright a span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../images/encyclopedy/buttons-sprite.png);
+	}
+	
+	#detailPage .page .copyright p {
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		left: 40px;
+		width: auto;
+		height: 72px;
+		line-height: 72px;
+		font-size: 15px;
+		font-family: 'myriad-pro';
+		white-space: nowrap;
+		background: url(../images/encyclopedy/copyright-bg.png) repeat;
+		
+		-webkit-border-radius: 0 36px 36px 0;
+		border-radius: 0 36px 36px 0;
+	}
+	
+	#detailPage .page .copyright p span {
+		display: block;
+		padding: 0 36px 0 54px;
+	}
+	
+	#detailPage .page .copyright p span br {
+		display: none;
+	}
+	
+/* /PAGE */
+
+
+
+/* HOMEPAGE */
+
+	#scrollWrapper {
+		position:relative;
+		top: 0;
+		left: 0;
+		z-index:1;
+		width: 100%;
+		height: 100%;
+		
+	}
+
+	#eventsTimeline {
+		position: absolute;
+    z-index: 1;
+		height: 100%;
+		padding: 0;
+	}
+	
+	#eventsTimeline .list {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		
+		-moz-transition-duration: 550ms;
+		-webkit-transition-duration: 550ms;
+		-o-transition-duration: 550ms;
+		transition-duration: 550ms;
+		
+		-moz-transition-property: left;
+		-webkit-transition-property: left;
+		-o-transition-property: left;
+		transition-property: left;
+	}
+	
+	#eventsTimeline a {
+		display: block;
+		float: left;
+		overflow: hidden;
+		position: relative;
+		width: 20%;
+		height: 100%;
+		background: no-repeat bottom center;
+		background-size: cover;
+		text-decoration: none;
+	}
+	
+	#eventsTimeline a strong {
+		display: block;
+		position: absolute;
+		bottom: 100px;
+		left: 27px;
+		right: 27px;
+		z-index: 10;
+		height: 110px;
+		line-height: 32px;
+		font-family: "komu-a";
+		font-size: 28px;
+		font-weight: 400;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	
+	#eventsTimeline a span {
+		display: block;
+		position: absolute;
+	}
+	
+	#eventsTimeline a span.shadow {
+		top: 0;
+		right: 0;
+		width: 17px;
+		height: 100%;
+		background: url(../images/encyclopedy/hp-link-shadow.png) repeat-y;
+	}
+	
+	#eventsTimeline a img {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		min-width: 100%;
+		min-height: 100%;
+	}
+	
+	#eventsTimeline a .active {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		
+		-moz-transition-duration: 250ms;
+		-webkit-transition-duration: 250ms;
+		-o-transition-duration: 250ms;
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity;
+		-webkit-transition-property: opacity;
+		-o-transition-property: opacity;
+		transition-property: opacity;
+	}
+	
+	#eventsTimeline a:hover .active {
+		opacity: 1;
+		filter: alpha(opacity=100);
+	}
+	
+	.ipad #eventsTimeline a:hover .active {
+		opacity: 0;
+	}
+	
+	#eventsTimeline a span.text {
+		bottom: 210px;
+		left: 27px;
+		right: 27px;
+		z-index: 10;
+		height: 27px;
+		font-family: "myriad-pro";
+		font-size: 16px;
+		font-weight: 400;
+	}
+	
+	/* SPECIAL BOX */
+		#eventsTimeline a#shortProjectInfo {
+			background-color: #3d3d3d;
+		}
+	
+		#eventsTimeline a#shortProjectInfo strong {
+			bottom: 124px;
+			font-size: 36px;
+		}
+		
+		#eventsTimeline a#shortProjectInfo span.active {
+			top: 0;
+			left: 0;
+			z-index: 12;
+			width: 100%;
+			height: 100%;
+			background-color: #600105;
+		}
+	
+	#years {
+		position: fixed;
+		top: 50%;
+		left: 0;
+		z-index: 20;
+		width: 100%;
+		height: 100px;
+		margin-top: -50px;
+		background: url(../images/encyclopedy/years-bg.png) repeat;
+	}
+	
+	#years .numbers {
+		position: relative;
+		width: 80%;
+		height: 100%;
+		margin: 0 10%;
+		background: url(../images/encyclopedy/years-numbers.png) bottom center repeat-x;
+	}
+	
+	#years .numbers span {
+		display: block;
+		float: left;
+		position: relative;
+		width: 10%;
+		height: 100px;
+		line-height: 100px;
+		text-align: center;
+	}
+	
+	#years .numbers a {
+		display: block;
+		position: relative;
+		z-index: 5;
+		width: 100%;
+		height: 100px;
+		line-height: 100px;
+		font-family: "myriad-pro";
+		font-size: 16px;
+		font-weight: 400;
+		text-decoration: none;
+		color: #f0f0f0;
+	}
+	#years .numbers a span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../images/encyclopedy/year-prev-next-bg.png);
+	}
+	
+	#years .flag {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0%;
+		width: 10%;
+		height: 100px;
+		background: url(../images/encyclopedy/year-flag.png) no-repeat center center;
+	}
+	
+	#years .prev,
+	#years .next {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 10%;
+		height: 100px;
+		cursor: pointer;
+	}
+	#years .next {
+		left: auto;
+		right: 0;
+	}
+	
+	#years .prev span,
+	#years .next span {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 27px;
+		width: 14px;
+		height: 26px;
+		margin: -13px 0 0 0;
+		background: url(../images/encyclopedy/year-prev-next.png);
+	}
+	
+	#years .next span {
+		left: auto;
+		right: 27px;
+	}
+		
+	#years .next span.ico {
+		background-position: -16px 0; 
+	}
+	
+	#years .prev span.icoA {
+		background-position: 0 -28px; 
+	}
+	#years .next span.icoA {
+		background-position: -16px -28px; 
+	}
+	
+	#years .prev span.shadow,
+	#years .next span.shadow {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		background: url(../images/encyclopedy/year-prev-next-bg.png);
+	}
+	
+/* /HOMEPAGE */
+
+
+
+/* DOORS */
+
+	#detailPage .withDoors {
+		position: relative;
+		overflow: hidden;
+	}
+	
+	#detailPage .withDoors .doorUp,
+	#detailPage .withDoors .doorDown {
+		position: absolute;
+		left: 0;
+		z-index: 5;
+		width: 100%;
+		height: 50%;
+		background: url(../images/encyclopedy/noise.png) #2e2e2e;
+	}
+	
+	#detailPage .withDoors.opened .doorUp,
+	#detailPage .withDoors.opened .doorDown {
+		-webkit-box-shadow: 0px 0px 6px 2px #35322e;
+		box-shadow: 0px 0px 6px 2px #35322e;
+	}
+	
+	#detailPage .withDoors .doorUp {
+		top: 0;
+		height: 50.5%;
+		z-index: 6;
+	}
+	
+	#detailPage .withDoors .doorDown {
+		bottom: 0;
+	}
+	
+	#detailPage .withDoors .doorUp .line {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: url(../images/encyclopedy/door-line.png) no-repeat bottom center;
+	}
+	
+	#detailPage .page.withDoors .doorUp .text {
+		position: absolute;
+		top: auto;
+		bottom: 40px;
+	}
+	
+	#detailPage .withDoors .doorUp .repro {
+		position: absolute;
+		bottom: 100px;
+		left: 50%;
+		width: 215px;
+		height: 215px;
+		margin-left: -107px;
+		background: url(../images/encyclopedy/repro.png) no-repeat;
+	}
+
+
+/* /DOORS */
+
+
+
+/* IMAGE */
+
+	#detailPage .page.image,
+	#detailPage .page.finish {
+		overflow: hidden;
+		z-index: 1;
+	}
+
+	#detailPage .page.image img,
+	#detailPage .page.finish img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	
+	#detailPage .page.image .text,
+	#detailPage .page.finish .text {
+		display: block;
+		position: fixed;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+	
+	#detailPage .page.image .text p,
+	#detailPage .page.finish .text p,
+	#detailPage .page.logo .text p {
+		max-width: 960px;
+		margin: 0 auto;
+		line-height: 40px;
+		font-family: 'myriad-pro';
+		font-size: 28px;
+		text-align: center;
+		color: #fff;
+	}
+	#detailPage .page.finish .text p {
+		line-height: 50px;
+		font-size: 38px;
+	}
+	
+	#detailPage .page.image .text p q,
+	#detailPage .page.finish .text p q {
+		font-style: italic;
+	}
+	
+	#detailPage.light .page.image .text p {
+		color: #191919;
+	}
+	
+	#detailPage .page.image .text p span.author {
+		display: block;
+		padding-top: 25px;
+		line-height: 30px;
+		font-size: 20px;
+		color: #8f8d8b;
+	}
+	
+	#detailPage .page.image .text p span.headline {
+		display: block;
+		padding-top: 50px;
+		color: #bb2826;
+	}
+	
+	#detailPage .page.image .text p span.headline1 {
+		display: block;
+		line-height: 150px;
+		font-family: 'komu-a';
+		font-size: 140px;
+		color: #fff;
+	}
+	
+	#detailPage .page.image .text p span.headline2 {
+		display: block;
+		padding-top: 0px;
+		line-height: 90px;
+		font-family: 'komu-a';
+		font-size: 80px;
+		color: #fff;
+	}
+	
+	#detailPage .page.image .text p span.headline3 {
+		display: block;
+		padding-top: 0px;
+		line-height: 50px;
+		font-family: 'komu-a';
+		font-size: 45px;
+		color: #fff;
+	}
+	
+	#detailPage .page.image .text p span.red {
+		color: #bb2826;
+	}
+	
+	
+/* /IMAGE */
+
+
+
+/* LOGO */
+
+	#detailPage .page.logo {
+		overflow: hidden;
+		z-index: 0;
+	}
+
+	#detailPage .page.logo img {
+		display: block;
+		width: auto;
+		height: auto;
+	}
+	
+	#detailPage .page.logo .fixed {
+		display: block;
+		position: fixed;
+		top: 0%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	body.ipad #detailPage .page.logo .fixed {
+		position: absolute;
+	}
+	
+	#detailPage .page.logo .fixed img {
+		display: block;
+		width: auto;
+	}
+	
+	#detailPage .page.logo .overlay {
+		display: block;
+		position: absolute;
+		top: 0%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	#detailPage .page.logo .overlay img {
+		display: block;
+		
+	}
+	
+	#detailPage .page.logo .text {
+		position: absolute;
+		bottom: 10%;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+	
+/* /LOGO */
+
+
+
+/* VIDEO & AUDIO */
+
+	#detailPage .page.video,
+	#detailPage .page.audio {
+		z-index: 8;
+		background-color: #2e2e2e;
+	}
+	
+	#detailPage .page.video .text,
+	#detailPage .page.audio .text {
+		position: relative;
+		z-index: 5;
+		display: block;
+		position: fixed;
+		top: 42%;
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+	
+	#detailPage .page.video .text p,
+	#detailPage .page.audio .text p {
+		max-width: 850px;
+		margin: 0 auto;
+		line-height: 40px;
+		font-family: 'myriad-pro';
+		font-size: 28px;
+		text-align: center;
+		color: #fff;
+	}
+	
+	#detailPage .page.video .buttonPlay,
+	#detailPage .page.audio .buttonPlay,
+	#detailPage .page.video .buttonMute {
+		z-index: 100;
+	}
+	
+	#detailPage .video .videoControls,
+	#detailPage .audio .videoControls {
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 560px;
+		height: 80px;
+		margin-top: -40px;
+		margin-left: -290px;
+	}
+	
+	#detailPage .video .videoControls .buttonPlay,
+	#detailPage .audio .videoControls .buttonPlay {
+		left: 0;
+		margin-left: 0;
+		top: 4px;
+	}
+	
+	#detailPage .video .videoControls .buttonMute {
+		left: auto;
+		right: 0;
+		margin-left: 0;
+		top: 4px;
+	}
+	
+	#detailPage .video .videoControls .line2,
+	#detailPage .audio .videoControls .line2 {
+		position: absolute;
+		top: 26px;
+		left: 80px;
+		width: 400px;
+		height: 28px;
+	}
+	
+/* /VIDEO & AUDIO */
+
+
+
+/* VIDEO */
+
+	#detailPage .video .TV {
+		position: relative;
+		overflow: hidden;
+		position: relative;
+		top: 20%;
+		height: 60%;
+		background: url(../images/encyclopedy/tv-bg.jpg) no-repeat bottom center;
+		background-size: cover;
+	}
+	
+	#detailPage .video .TV img {
+		display: block;
+		position: relative;
+		z-index: 3;
+		height: 100%;
+		margin: 0 auto;
+		
+		-webkit-box-shadow: 0px 0px 50px 20px #060400;
+		box-shadow: 0px 0px 50px 20px #060400;
+	}
+	
+	#detailPage .video .TV .inner {
+		position: absolute;
+		overflow: hidden;
+		top: 10%;
+		margin: 0 auto;
+		width: 79%;
+		height: 80%;
+	}
+	
+	#detailPage .video .TV .inner img {
+		z-index: 1;
+		
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	
+	#detailPage .video .TV .inner video {
+		position: absolute;
+		z-index: 2;
+		opacity: 0.6;
+	}
+	
+	#detailPage .video .TV .inner .YTVideo {
+		position: absolute;
+		z-index: 2;
+	}
+	
+/* /VIDEO */
+
+
+
+/* AUDIO */
+
+	#detailPage .audio .TV {
+		position: relative;
+		overflow: hidden;
+		position: relative;
+		top: 20%;
+		height: 60%;
+		background: url(../images/encyclopedy/radio-bg.jpg) bottom left;
+	}
+	
+	#detailPage .audio .TV .inner {
+		position: absolute;
+		overflow: hidden;
+		top: 50%;
+		left: 50%;
+		width: 1056px;
+		height: 632px;
+		margin: -316px 0 0 -528px;
+		background: url(../images/encyclopedy/radio-box.png) no-repeat;
+	}
+	
+	#detailPage .audio .TV .inner .leftDisc,
+	#detailPage .audio .TV .inner .rightDisc {
+		display: block;
+		position: absolute;
+		top: 29px;
+		left: 105px;
+		width: 379px;
+		height: 379px;
+	}
+	
+	#detailPage .audio .TV .inner .rightDisc {
+		top: 29px;
+		left: 577px;
+	}
+	
+	#detailPage .audio .TV .inner .leftDisc span,
+	#detailPage .audio .TV .inner .rightDisc span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	#detailPage .audio .TV .inner .leftDisc span.rotate,
+	#detailPage .audio .TV .inner .rightDisc span.rotate {
+		background: url(../images/encyclopedy/radio-dics.png) no-repeat;
+		-webkit-transform-style: preserve-3d;
+	}
+	
+	#detailPage .audio .TV .inner .leftDisc span.static,
+	#detailPage .audio .TV .inner .rightDisc span.static {
+		background: url(../images/encyclopedy/radio-shadow.png) no-repeat;
+	}
+	
+	
+	/* rotations */
+	@-moz-keyframes rotate {
+		from { -moz-transform: rotate(0deg); }
+		to { -moz-transform: rotate(-360deg); }
+	}
+	@-webkit-keyframes rotate {
+		from { -webkit-transform: rotate(0deg); }
+		to { -webkit-transform: rotate(-360deg); }
+	}
+	@-o-keyframes rotate {
+		from { -o-transform: rotate(0deg); }
+		to { -o-transform: rotate(-360deg); }
+	}
+	@keyframes rotate {
+		from { transform: rotate(0deg); }
+		to { transform: rotate(-360deg); }
+	}
+	
+	#detailPage .audio .TV .inner .leftDisc span.rotate,
+	#detailPage .audio .TV .inner .rightDisc span.rotate {
+		-moz-animation-name: rotate; 
+		-moz-animation-duration: 2.5s; 
+		-moz-animation-iteration-count: infinite;
+		-moz-animation-timing-function: linear;
+		-moz-animation-play-state: paused;
+		
+		-webkit-animation-name: rotate; 
+		-webkit-animation-duration: 2.5s; 
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-play-state: paused;
+		
+		-o-animation-name: rotate; 
+		-o-animation-duration: 2.5s; 
+		-o-animation-iteration-count: infinite;
+		-o-animation-timing-function: linear;
+		-o-animation-play-state: paused;
+		
+		animation-name: rotate; 
+		animation-duration: 2.5s; 
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-play-state: paused;
+		
+		-webkit-transform-style: preserve-3d;
+		
+	}
+	
+	#detailPage .audio.play .TV .inner .leftDisc span.rotate,
+	#detailPage .audio.play .TV .inner .rightDisc span.rotate {
+		-moz-animation-play-state: running;
+		-webkit-animation-play-state: running;
+		-o-animation-play-state: running;
+		animation-play-state: running;
+	}
+	
+	
+	/* IE */
+	#detailPage .audio .TV .inner .recorder {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+/* /AUDIO */
+
+
+
+/* INTERACTIVE */
+
+	#detailPage .page.interactive {
+		overflow: hidden;
+		z-index: 1;
+		background: url(../images/encyclopedy/noise.png) #2e2e2e;
+	}
+	#detailPage.light .page.interactive {
+		background-color: #e9eaeb;
+	}
+	
+	#detailPage .page.logo {
+		z-index: 0;
+	}
+	
+	
+	#detailPage .page.interactive img {
+		display: block;
+		position: absolute;
+		width: auto;
+		height: auto;
+	}
+	
+	#detailPage .page.interactive .text {
+		display: block;
+		position: absolute;
+		width: 100%;
+	}
+	
+	#detailPage .page.interactive .text p {
+		max-width: 850px;
+		margin: 0 auto;
+		line-height: 40px;
+		font-family: 'myriad-pro';
+		font-size: 24px;
+		text-align: center;
+		color: #fff;
+	}
+	
+	#detailPage.light .page.interactive .text p {
+		color: #191919;
+	}
+	
+	#detailPage .page.interactive .text.left {
+		left: auto;
+		right: 55%;
+		width: 40%;
+		
+	}
+	
+	#detailPage .page.interactive .text.right {
+		width: 45%;
+		max-width: 600px;
+		left: 50%;
+	}
+	
+	#detailPage .page.interactive .text.aLeft p {
+		text-align: left;
+	}
+	
+	#detailPage .page.interactive .text.aLeft p q {
+		font-style: italic;
+	}
+	
+	#detailPage .page.interactive .text.aRight p {
+		text-align: right;
+	}
+	
+	#detailPage .page.interactive .text p .author {
+		display: block;
+		padding-top: 25px;
+		line-height: 30px;
+		font-size: 20px;
+		color: #8f8d8b;
+	}
+	
+/* /INTERACTIVE */
+
+
+
+/* FOOTER */
+
+	#detailPage .footer {
+		position: relative;
+		z-index: 9;
+		background: url(../images/encyclopedy/footer/noise.png);
+	}
+
+	#detailPage .sharePage {
+		padding-top: 108px;
+		padding-bottom: 92px;
+	}
+
+	#detailPage .share {
+		position: relative;
+		width: 963px;
+		height: 530px;
+		margin: 0 auto;
+	}
+
+	#detailPage .share .letter {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 963px;
+		height: 530px;
+		background: url(../images/encyclopedy/footer/letter.png) no-repeat  0 0;
+	}
+	
+	#detailPage .share h2 {
+		position: absolute;
+		top: 50px;
+		left: 0;
+		width: 100%;
+		line-height: 40px;
+		font-family: 'myriad-pro';
+		font-size: 28px;
+		text-align: center;
+	}
+
+	#detailPage .share a {
+		display: block;
+		overflow: visible;
+		position: absolute;
+		top: 180px;
+		left: 200px;
+		z-index: 5;
+		width: 142px;
+		height: 143px;
+	}
+
+	#detailPage .share a.emailBut {
+		background: url(../images/encyclopedy/footer/mail-ico.png) no-repeat 0 0;
+	}
+
+	#detailPage .share a.facebookBut {
+		left: 400px;
+		background: url(../images/encyclopedy/footer/fb-ico.png) no-repeat 0 0;
+	}
+
+	#detailPage .share a.twitterBut {
+		left: 600px;
+		background: url(../images/encyclopedy/footer/tw-ico.png) no-repeat 0 0;
+	}
+
+	#detailPage .share a span {
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 172px;
+		height: 173px;
+		margin: -15px 0 0 -15px;
+		text-indent: 150%;
+	}
+
+	#detailPage .share a.emailBut span {
+		background: url(../images/encyclopedy/footer/mail-shadow.png) no-repeat 0 0;
+	}
+
+	#detailPage .share a.facebookBut span {
+		background: url(../images/encyclopedy/footer/fb-shadow.png) no-repeat 0 0;
+	}
+
+	#detailPage .share a.twitterBut span {
+		background: url(../images/encyclopedy/footer/tw-shadow.png) no-repeat 0 0;
+	}
+
+
+	#detailPage .share .facebookStamp,
+	#detailPage .share .twitterStamp,
+	#detailPage .share .emailStamp {
+		display: block;
+		position: absolute;
+		width: 142px;
+		height: 143px;
+		background: url(../images/encyclopedy/footer/stamps.png) no-repeat 0 0;	
+	}
+	#detailPage .share .twitterStamp {
+		background-position: -145px 0;
+	}
+	#detailPage .share .emailStamp {
+		background-position: -290px 0;
+	}
+	
+	#detailPage .scrollToShare {
+		display: block;
+		overflow: hidden;
+		position: fixed;
+		top: 80px;
+		right: 27px;
+		z-index: 20;
+		width: 138px;
+		height: 138px;
+		line-height: 180px;
+		font-family: "myriad-pro";
+		font-size: 18px;
+		font-weight: 500;
+		text-align: center;
+		text-decoration: none;
+		color: #fff;
+		background: none;
+	}
+	#detailPage .scrollToShare:hover {
+		color: #373635;
+	}
+	
+	#detailPage .scrollToShare span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	#detailPage .scrollBack {
+		display: none;
+		overflow: hidden;
+		position: fixed;
+		top: 230px;
+		right: 67px;
+		z-index: 20;
+		width: 58px;
+		height: 20px;
+		font-family: "myriad-pro";
+		font-size: 18px;
+		font-weight: 500;
+		text-align: center;
+		text-decoration: none;
+		color: #fff;
+		cursor: pointer;
+		
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+	
+	#detailPage .shareThis {
+		display: none;
+		position: fixed;
+		top: 263px;
+		left: 50%;
+		z-index: 25;
+		width: 440px;
+		margin-left: -220px;
+	}
+	
+	#detailPage .shareThis .closeBut {
+		position: fixed;
+		top: 72px;
+		right: 28px;
+	}
+	
+	#detailShadow {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../images/promo-shadow.png) repeat;
+	}
+	
+	#detailPage #detailShadow {
+		z-index: 24;
+	}
+
+
+/* /FOOTER */
+
+
+
+/* USED SOURCE and RECOMMENDED SOURCE */
+
+	#detailPage .page.usedSources,
+	#detailPage .page.recommendedSources {
+		z-index: 1;
+	}
+	
+	#detailPage .usedSources h2,
+	#detailPage .recommendedSources h2 {
+		display: block;
+		width: 960px;
+		margin: 0 auto;
+		padding: 121px 0 9px;
+		line-height: 54px;
+		font-family: 'komu-a';
+		font-size: 48px;
+		text-align: left;
+		color: #b7b7b7;
+	}
+	
+	#detailPage .recommendedSources h2 {
+		padding-top: 0;
+	}
+	
+	#detailPage .usedSources .items,
+	#detailPage .recommendedSources .items {
+		width: 960px;
+		margin: 0 auto;
+		padding: 27px 0;
+	}
+	
+	#detailPage .usedSources .item,
+	#detailPage .recommendedSources .item {
+		position: relative;
+		float: left;
+		width: 200px;
+		margin-right: 53px;
+		margin-bottom: 27px;
+	}
+	#detailPage .usedSources .lastInRow,
+	#detailPage .recommendedSources .lastInRow {
+		margin-right: 0;
+	}
+	#detailPage .usedSources .item:nth-child(4n),
+	#detailPage .recommendedSources .item:nth-child(4n) {
+		margin-right: 0;
+	}
+	
+	#detailPage .usedSources .item img {
+		display: block;
+	}
+	
+	#detailPage .usedSources .item strong,
+	#detailPage .recommendedSources .item strong {
+		display: block;
+		min-height: 78px;
+		margin-top: 12px;
+		line-height: 20px;
+		font-weight: normal;
+		text-align: left;
+		color: #b7b7b7;
+	}
+	#detailPage .recommendedSources .item strong {
+		min-height: 0;
+		padding-bottom: 9px; 
+	}
+	
+	#detailPage .usedSources .item strong a,
+	#detailPage .recommendedSources .item strong a {
+		color: #b7b7b7;
+	}
+	#detailPage .usedSources .item strong a:hover,
+	#detailPage .recommendedSources .item strong a:hover {
+		color: #fff;
+	}
+	
+	#detailPage .recommendedSources .item h3 {
+		padding-bottom: 27px;
+		font-family: "myriad-pro";
+		font-size: 24px;
+		font-weight: 400;
+		font-style: italic;
+		color: #b7b7b7;
+	}
+
+/* /USED SOURCE */
+
+
+
+/* PREV AND NEXT */
+
+	.prevAndNext {
+		position: relative;
+		z-index: 25;
+		width: 100%;
+		height: 315px;
+	}
+	
+	.prevAndNext a {
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		width: 50%;
+		height: 100%;
+	}
+	
+	.prevAndNext a.prev {
+		left: 0;
+		z-index: 5;
+	}
+	
+	.prevAndNext a.next {
+		right: 0;
+		z-index: 5;
+		text-align: right;
+	}
+	
+	.prevAndNext a span {
+		display: block;
+		position: absolute;
+		top: 110px;
+		left: 140px;
+		z-index: 10;
+		width: auto;
+		max-width: 400px;
+		height: 150px;
+		line-height: 27px;
+		font-family: 'myriad-pro';
+		font-size: 18px;
+	}
+	
+	.prevAndNext a.next span {
+		left: auto;
+		right: 140px;
+	}
+	
+	.prevAndNext a strong {
+		display: block;
+		line-height: 50px;
+		font-family: 'komu-a';
+		font-size: 42px;
+		font-weight: 400;
+	}
+	
+	.widthLess .prevAndNext a strong {
+		font-size: 36px;
+	}
+	
+	.prevAndNext a img {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		min-width: 100%;
+		min-height: 100%;
+	}
+	.prevAndNext a.next img {
+		left: auto;
+		right: 0;
+	}
+	
+	.prevAndNext a img.active {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		
+		-moz-transition-duration: 250ms;
+		-webkit-transition-duration: 250ms;
+		-o-transition-duration: 250ms;
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity;
+		-webkit-transition-property: opacity;
+		-o-transition-property: opacity;
+		transition-property: opacity;
+	}
+	
+	.prevAndNext a:hover img.active {
+		opacity: 1;
+		filter: alpha(opacity=100);
+	}
+	
+	.prevAndNext a.all {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		width: 194px;
+		height: 194px;
+		margin: -97px 0 0 -97px;
+		line-height: 200px;
+		font-family: 'myriad-pro';
+		font-size: 18px;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+	.prevAndNext a.all span.text {
+		line-height: 200px;
+	}
+	
+	.prevAndNext a.empty {
+		background: url("../images/encyclopedy/footer/noise.png") repeat top left;
+	}
+	.prevAndNext a.next.empty {
+		background-position: top right;
+	}
+	
+/* /PREV AND NEXT */	
+
+
+
+/* AUTOSCROLL */
+
+	#autoScrollControls {
+		position: fixed;
+		bottom: 0;
+		left: 50%;
+		z-index: 23;
+		width: 400px;
+		height: 70px;
+		margin-left: -200px;
+	}
+	
+	#autoScrollControls a.slower,
+	#autoScrollControls a.faster {
+		display: none;
+		position: absolute;
+		top: 30px;
+		font-size: 40px;
+		font-weight: bold;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	
+	#autoScrollControls a.slower {
+		left: 80px;
+	}
+	#autoScrollControls a.faster {
+		right: 80px;
+	}
+	
+	#autoScrollControls a.play {
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		left: 50%;
+		width: 72px;
+		height: 67px;
+		margin-left: -36px;
+	}
+	
+	#autoScrollControls a.play span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+/* /AUTOSCROLL */
+
+
+#aboutProject strong {
+	line-height: 40px;
+	font-size: 36px;
+}
+
+#aboutProject .moreContent {
+	padding-top:0;
+}
+
+#aboutProject .moreContent strong {
+	padding-left: 0;
+}

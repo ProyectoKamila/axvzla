@@ -1,0 +1,115 @@
+@media only screen and (max-height : 650px) {
+	
+#detailPage .withDoors .doorUp .repro {
+		position: absolute;
+		bottom: 90px;
+		left: 50%;
+		width: 150px;
+		height: 150px;
+		margin-left: -75px;
+		background: url(../images/encyclopedy/repro-small.png) no-repeat;
+	}
+	
+	
+}
+
+@media only screen and (max-width : 1025px) {
+	
+	.videoInfo {
+		left: 130px;
+	}
+	
+	#videoPanel .related {
+		left: 140px;
+	}
+	
+	.videoInfo h1,
+	#aboutProject strong.headline {
+		height: 70px;
+	}
+	
+	.videoInfo h1 br, 
+	#aboutProject strong.headline br {
+		display: none;
+	}
+	
+	#shareBut {
+		top: 198px;
+	}
+	
+	#videoPanel .related {
+		top: 198px;
+	}
+	
+}
+
+@media only screen and (max-width : 1025px) {
+	
+	.videoInfo {
+		left: 130px;
+	}
+	
+	#videoPanel .related {
+		left: 140px;
+	}
+	
+	.videoInfo h1,
+	#aboutProject strong.headline {
+		padding-top: 7px;
+	}
+	
+	#aboutProject {
+		max-width: 780px;
+		padding-left: 130px;
+	}
+	
+	#aboutProject .moreContent {
+		padding-right: 110px;
+	}
+	
+	#videoControl .left {
+		left: 130px;
+	}
+	
+}
+
+@media only screen and (min-device-width : 701px) and (max-device-width : 900px) and (orientation:portrait) {	/* tablets - portrait */
+/*} @media only screen and (min-width : 701px) and (max-width : 900px) {*/
+	
+	#turnYourTablet {
+		display: block;
+	}
+	
+}
+
+
+@media only screen and (orientation:landscape) {
+	
+	#smartPhoneCover {
+		background-image: url(../images/smartphone-cover-wide.jpg);
+		background-position: 50% 40%;
+	}
+	
+}
+@media (max-width:480px){
+    #faceGrid .face.imgAlign0{
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 300px !important;
+    }
+    .title-suscribe{
+        text-align: left;
+    }
+    .btn-circle{
+        margin-top: 25px;
+        margin-left: 35%;
+    }
+    .icon{
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+              display: inline-block !important;
+              margin-left: 15%;
+
+    }
+}

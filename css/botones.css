@@ -1,0 +1,1863 @@
+@charset "utf-8";
+
+/* BASIC */
+
+	#videoControl .center a,
+	#videoControl .right a {
+		display: inline-block;
+		overflow: hidden;
+		position: relative;
+		width: 71px;
+		height: 71px;
+		margin-right: 8px;
+		line-height: 71px;
+		font-family: "myriad-pro";
+		font-size: 18px;
+		font-weight: 400;
+		text-align: center;
+		text-decoration: none;
+		background-image: url(../images/detail/buttons-sprite.png);
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+	
+	#videoControl .right a:first-child {
+		margin-right: 0;
+	}
+	
+	#videoControl .right a,	
+	#playpauseBut {
+		text-indent: 100%;
+	}
+	
+	#videoControl .right a {
+		display: block;
+		float: right;
+	}
+	
+	#videoControl .left a {
+		display: block;
+		float: left;
+		width: auto;
+		padding: 0 10px;
+		background: none;
+		text-shadow: 0px 1px 1px #333;
+	}
+
+/* /BASIC */
+
+
+
+/* aboutProjectHP */
+
+	.aboutProjectHP {
+		display: block;
+		position: fixed;
+		bottom: 0px;
+		right: 130px;
+		z-index: 20;
+		width: auto;
+		height: 71px;
+		padding: 0 10px;
+		line-height: 71px;
+		font-family: "myriad-pro";
+    font-size: 18px;
+    font-weight: 400;
+		text-shadow: 0 1px 1px #333333;
+		color: #fff;
+	}
+/* aboutProjectHP */
+
+
+/* CLOSE BUTTON */ 
+
+	.closeBut {
+		display: block;
+		width: 71px;
+		height: 71px;
+	}
+	
+	.closeBut span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.closeBut span.shadow {
+		background: url(../images/detail/buttons-sprite.png) no-repeat -184px 0;
+		opacity: 0;
+		filter:alpha(opacity=0);
+		
+		-moz-transition-duration: 250ms;
+		-webkit-transition-duration: 250ms;
+		-o-transition-duration: 250ms;
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity;
+		-webkit-transition-property: opacity;
+		-o-transition-property: opacity;
+		transition-property: opacity;
+	}
+	
+	.closeBut span.ico {
+		background: url(../images/detail/buttons-sprite.png) no-repeat 0 0;
+		opacity: 1;
+		
+		-moz-transition-duration: 250ms;
+		-webkit-transition-duration: 250ms;
+		-o-transition-duration: 250ms;
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity;
+		-webkit-transition-property: opacity;
+		-o-transition-property: opacity;
+		transition-property: opacity;
+	}
+	
+	.closeBut.hover span.shadow {
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+	.closeBut.hoverOut span.shadow {
+		opacity: 0;
+	}
+	
+	.closeBut.click span.shadow {
+		-moz-transition-duration: 500ms; 		
+		-webkit-transition-duration: 500ms; 		
+		-o-transition-duration: 500ms; 		
+		transition-duration: 500ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		opacity: 0.5;
+		filter:alpha(opacity=50);
+	}
+	.closeBut.hover span.ico {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	
+/* /CLOSE BUTTON */
+
+
+
+/* CLOSE BUTTON LIKE PLAY BUTTON */
+	.closeBut.play span.shadow {
+		background-position: 0 -2827px;
+
+	}
+	
+	.closeBut.play span.ico {
+		background-position: -318px -2827px;
+	}
+/* /CLOSE BUTTON LIKE PLAY BUTTON */
+
+
+
+/* VIDEO INFO BUTTONS */
+
+	.links a {
+		position: relative;
+		overflow: hidden;
+		display: inline-block;
+		width: 138px;
+		height: 138px;
+		margin-right: 8px;
+		line-height: 180px;
+		font-family: "myriad-pro";
+		font-size: 18px;
+		font-weight: 500;
+		text-align: center;
+		text-decoration: none;
+		color: #fff;
+		
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: color;
+		-webkit-transition-property: color;
+		-o-transition-property: color;
+		transition-property: color;
+	}
+	
+	.links a.readMoreBut {
+		background-position: 0 -1104px;
+	}
+	
+	.links a span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.links a span.ico {
+		background: url(../images/detail/buttons-sprite.png) no-repeat 0px -1263px;
+		opacity: 1;
+	}
+	.links a.readMoreBut span.ico {
+		background-position: 0 -1104px;
+		opacity: 1;
+	}
+	
+	.links a span.shadow {
+		background: url(../images/detail/buttons-sprite.png) no-repeat -318px -1263px;
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	.links a.readMoreBut span.shadow {
+		background-position: -318px -1104px;
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+
+	/**/
+	.links a.joinUSBut {
+		background: url(../images/detail/buttons-sprite.png) no-repeat 0px -3190px;
+	}
+
+	
+	
+	.links a.joinUSBut span.ico {
+		/*background: url(../images/detail/buttons-sprite.png) no-repeat 0px -3145px;*/
+		background: none;
+		opacity: 1;
+	}
+	
+	.links a.joinUSBut span.shadow {
+		background: url(../images/detail/buttons-sprite.png) no-repeat -318px -3190px;
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	/**/
+	
+	
+	.links a.hover span.shadow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+	.links a.hoverOut span.shadow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 0;
+	}
+	
+	.links a.hover {
+		color: #bebebf;
+	}
+	
+	.links a.click span.shadow {
+		-moz-transition-duration: 500ms; 		
+		-webkit-transition-duration: 500ms; 		
+		-o-transition-duration: 500ms; 		
+		transition-duration: 500ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 0.5;
+		filter:alpha(opacity=50);
+	}
+	.links a.hover span.ico {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+
+
+/* /VIDEO INFO BUTTONS */
+
+
+	
+/* PLAY / PAUSE BUTTON */
+
+	#playpauseBut {
+		background-position: 300px 300px;
+	}
+	
+	#playpauseBut span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../images/detail/buttons-sprite.png) no-repeat 300px 300px;
+		
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+	}
+	
+	#playpauseBut .ico {
+		background-position: 0 -92px;
+	}
+	#playpauseBut .shadow {
+		background-position: -184px -92px;
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	
+	#playpauseBut.paused .ico {
+		background-position: 0 -184px;
+	}
+	#playpauseBut.paused  .shadow {
+		background-position: -184px -184px;
+	}
+	
+	#playpauseBut.hover .shadow {
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+	#playpauseBut.hover .ico {
+		opacity: 0.5;
+		filter:alpha(opacity=50);
+	}
+	
+	#playpauseBut.click .shadow {
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+	#playpauseBut.click .ico {
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	
+	
+/* /PLAY / PAUSE BUTTON */
+
+	
+
+/* BUTTON ANIMATIONS */
+	
+	@-moz-keyframes colorClickAnim {
+		0%		{ color: #fff; }
+		50%		{ color: #646464; }
+		100%	{ color: #fff; }
+	}
+	@-webkit-keyframes colorClickAnim {
+		0%		{ color: #fff; }
+		50%		{ color: #646464; }
+		100%	{ color: #fff; }
+	}
+	@-o-keyframes colorClickAnim {
+		0%		{ color: #fff; }
+		50%		{ color: #646464; }
+		100%	{ color: #fff; }
+	}
+	@keyframes colorClickAnim {
+		0%		{ color: #fff; }
+		50%		{ color: #646464; }
+		100%	{ color: #fff; }
+	}
+	
+	@-moz-keyframes opacityIn {
+		0%		{ opacity: 1.0; }
+		50%		{ opacity: 0.5; }
+		100%	{ opacity: 1.0; }
+	}
+	@-webkit-keyframes opacityIn {
+		0%		{ opacity: 1.0; }
+		50%		{ opacity: 0.5; }
+		100%	{ opacity: 1.0; }
+	}
+	@-o-keyframes opacityIn {
+		0%		{ opacity: 1.0; }
+		50%		{ opacity: 0.5; }
+		100%	{ opacity: 1.0; }
+	}
+	@keyframes opacityIn {
+		0%		{ opacity: 1.0; }
+		50%		{ opacity: 0.5; }
+		100%	{ opacity: 1.0; }
+	}
+	
+	
+	
+	@-moz-keyframes rotateRight {
+		from	{ -moz-transform: rotate(20deg); }
+		to		{ -moz-transform: rotate(380deg); }
+	}
+	@-webkit-keyframes rotateRight {
+		from	{ -webkit-transform: rotate(20deg); }
+		to		{ -webkit-transform: rotate(380deg); }
+	}
+	@-o-keyframes rotateRight {
+		from	{ -o-transform: rotate(20deg); }
+		to		{ -o-transform: rotate(380deg); }
+	}
+	@keyframes rotateRight {
+		from	{ transform: rotate(20deg); }
+		to		{ transform: rotate(380deg); }
+	}
+	
+	@-moz-keyframes rotateLeft {
+		from	{ -moz-transform: rotate(-20deg); }
+		to		{ -moz-transform: rotate(-380deg); }
+	}
+	@-webkit-keyframes rotateLeft {
+		from	{ -webkit-transform: rotate(-20deg); }
+		to		{ -webkit-transform: rotate(-380deg); }
+	}
+	@-o-keyframes rotateLeft {
+		from	{ -o-transform: rotate(-20deg); }
+		to		{ -o-transform: rotate(-380deg); }
+	}
+	@keyframes rotateLeft {
+		from	{ transform: rotate(-20deg); }
+		to		{ transform: rotate(-380deg); }
+	}
+	
+	
+	@-webkit-keyframes opacityHalfIn {
+		0%		{ opacity: 0.0; }
+		50%		{ opacity: 0.5; }
+		100%	{ opacity: 0.0; }
+	}
+	
+	@-webkit-keyframes fullRotateLeft {
+		from	{ -webkit-transform: rotate(0deg); }
+		to		{ -webkit-transform: rotate(-360deg); }
+	}
+	@-webkit-keyframes fullRotateRight {
+		from	{ -webkit-transform: rotate(0deg); }
+		to		{ -webkit-transform: rotate(360deg); }
+	}
+	
+/* /BUTTON ANIMATIONS */
+	
+
+	
+/* MINUS BUTTON */	
+	
+	#minus15But {
+		overflow: visible !important;
+		background-position: 300px 300px;
+	}
+	#minus15But.hover {
+		color: #646464;
+	}
+	
+	#minus15But span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../images/detail/buttons-sprite.png) no-repeat 300px 300px;
+	}
+	
+	#minus15But span.arrow {
+		top: -4px;
+		left: -4px;
+		width: 79px;
+		height: 79px;
+		
+		background-position: 4px -272px;
+	}
+	
+	#minus15But span.shadow {
+		opacity: 0;
+		filter:alpha(opacity=0);
+		
+		background-position: -184px -276px;
+	}
+	
+	#minus15But.hover span.shadow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+	#minus15But.hoverOut span.shadow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 0;
+	}
+
+	#minus15But.hover span.arrow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: all;
+		-webkit-transition-property: all;
+		-o-transition-property: all;
+		transition-property: all;
+		
+    -moz-transform: rotate(-20deg);
+		-webkit-transform: rotate(-20deg);
+		-o-transform: rotate(-20deg);
+		transform: rotate(-20deg);
+	}
+	
+	#minus15But.hoverOut span.arrow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: all;
+		-webkit-transition-property: all;
+		-o-transition-property: all;
+		transition-property: all;
+		
+    -moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	
+	#minus15But.click span.shadow {
+		-moz-transition: none;
+		-webkit-transition: none;
+		-o-transition: none;
+		transition: none;
+		
+		-moz-animation-name:	opacityIn;
+		-webkit-animation-name:	opacityIn;
+		-o-animation-name:	opacityIn;
+		animation-name:	opacityIn;
+		
+    -moz-animation-duration: 500ms;
+		-webkit-animation-duration: 500ms !important;
+		-o-animation-duration: 500ms;
+		animation-duration: 500ms;
+		
+		filter:alpha(opacity=50);
+	}
+
+	#minus15But.click span.arrow {
+		-moz-transition-duration: 0;
+		-webkit-transition-duration: 0;
+		-o-transition-duration: 0;
+		transition-duration: 0;
+		
+		-moz-transition-property: none;
+		-webkit-transition-property: none;
+		-o-transition-property: none;
+		transition-property: none;
+		
+		-moz-animation-name:	rotateLeft;
+		-webkit-animation-name:	rotateLeft;
+		-o-animation-name:	rotateLeft;
+		animation-name:	rotateLeft;
+		
+    -moz-animation-duration: 500ms;
+		-webkit-animation-duration: 500ms;
+		-o-animation-duration: 500ms;
+		animation-duration: 500ms;
+	}
+	
+	
+	/* touch */
+	#minus15But.touch span.shadow {
+		-webkit-animation-name:	opacityHalfIn;
+		
+    -moz-animation-duration: 500ms;
+		-webkit-animation-duration: 500ms !important;
+		-o-animation-duration: 500ms;
+		animation-duration: 500ms;
+		
+		filter:alpha(opacity=50);
+	}
+	
+	
+	#minus15But.touch span.arrow {
+		-webkit-animation-name:	fullRotateLeft;
+		-webkit-animation-duration: 500ms;
+	}
+	
+/* /MINUS BUTTON */	
+	
+	
+	
+	
+/* PLUS BUTTON */
+	
+	#plus15But {
+		overflow: visible !important;
+		background-position: 300px 300px;
+	}
+	
+	#plus15But.hover {
+		color: #646464;
+	}
+	
+	#plus15But span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../images/detail/buttons-sprite.png) no-repeat 300px 300px;
+	}
+	
+	#plus15But span.arrow {
+		top: -4px;
+		left: -4px;
+		width: 79px;
+		height: 79px;
+		
+		background-position: 4px -364px;
+	}
+	
+	#plus15But span.shadow {
+		opacity: 0;
+		filter:alpha(opacity=0);
+		background-position: -184px -276px;
+	}
+	
+	#plus15But.hover span.shadow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+	#plus15But.hoverOut span.shadow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 0;
+	}
+	
+	#plus15But.click span.shadow {
+		-moz-transition: none;
+		-webkit-transition: none;
+		-o-transition: none;
+		transition: none;
+		
+		-moz-animation-name:	opacityIn;
+		-webkit-animation-name:	opacityIn;
+		-o-animation-name:	opacityIn;
+		animation-name:	opacityIn;
+		
+    -moz-animation-duration: 500ms;
+		-webkit-animation-duration: 500ms;
+		-o-animation-duration: 500ms;
+		animation-duration: 500ms;
+		
+		filter:alpha(opacity=50);
+	}
+	
+
+	#plus15But.hover span.arrow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms;
+		-o-transition-duration: 250ms;
+		transition-duration: 250ms;
+		
+		-moz-transition-property: all;
+		-webkit-transition-property: all;
+		-o-transition-property: all;
+		transition-property: all;
+		
+    -moz-transform: rotate(20deg);
+		-webkit-transform: rotate(20deg);
+		-o-transform: rotate(20deg);
+		transform: rotate(20deg);
+	}
+	
+	#plus15But.hoverOut span.arrow {
+		-moz-transition-duration: 250ms;
+		-webkit-transition-duration: 250ms;
+		-o-transition-duration: 250ms;
+		transition-duration: 250ms;
+		
+		-moz-transition-property: all;
+		-webkit-transition-property: all;
+		-o-transition-property: all;
+		transition-property: all;
+		
+    -moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	#plus15But.click span.arrow {		
+		-moz-transition-duration: 0;
+		-webkit-transition-duration: 0;
+		-o-transition-duration: 0;
+		transition-duration: 0;
+		
+		-moz-transition-property: none;
+		-webkit-transition-property: none;
+		-o-transition-property: none;
+		transition-property: none;
+		
+		-moz-animation-name:	rotateRight;
+		-webkit-animation-name:	rotateRight;
+		-o-animation-name:	rotateRight;
+		animation-name:	rotateRight;
+		
+    -moz-animation-duration: 500ms;
+		-webkit-animation-duration: 500ms;
+		-o-animation-duration: 500ms;
+		animation-duration: 500ms;
+	}
+	
+	/* touch */
+	#plus15But.touch span.shadow {
+		-webkit-animation-name:	opacityHalfIn;
+		
+    -moz-animation-duration: 500ms;
+		-webkit-animation-duration: 500ms !important;
+		-o-animation-duration: 500ms;
+		animation-duration: 500ms;
+		
+		filter:alpha(opacity=50);
+	}
+	
+	
+	#plus15But.touch span.arrow {
+		-webkit-animation-name:	fullRotateRight;
+		-webkit-animation-duration: 500ms;
+	}
+	
+/* /PLUS BUTTON */	
+
+
+/* RIGHT BUTTONS */
+
+	#videoControl .right a {
+		background-position: 300px 300px;
+	}
+
+	#videoControl .right a span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/detail/buttons-sprite.png);
+		background-repeat: no-repeat;
+		
+		-moz-transition-duration: 250ms;
+		-webkit-transition-duration: 250ms;
+		-o-transition-duration: 250ms;
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+	}
+	
+	#videoControl .right a span.shadow {
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	
+	
+	#videoControl .right a.hover span.shadow {
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+	#videoControl .right a.hoverOut span.shadow {
+		opacity: 0;
+	}
+	
+	#videoControl .right a.click span.shadow {
+		opacity: 0.5;
+		filter:alpha(opacity=50);
+	}
+	#videoControl .right a.hover span.ico {
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	
+	#subtitlesBut .ico {
+		background-position: 0 -460px;
+	}
+	
+	#subtitlesBut .shadow {
+		background-position: -184px -460px;
+	}
+	
+	
+	#muteBut .ico {
+		background-position: 0 -552px;
+	}
+	#muteBut  .shadow {
+		background-position: -184px -552px;
+	}
+	
+	#muteBut.muted .ico {
+		background-position: 0 -644px;
+	}
+	#muteBut.muted .shadow {
+		background-position: -184px -644px;
+	}
+	
+	#fullscreenBut .ico {
+		background-position: 0 -736px;
+	}
+	#fullscreenBut .shadow {
+		background-position: -184px -736px;
+	}
+	
+/* /RIGHT BUTTONS */
+
+
+/* SHARE BUT */
+
+	#shareBut,
+	#shareButPetition {
+		display: block;
+		position: fixed;
+		float: none;
+		top: 268px;
+		right: 28px;
+		z-index: 5;
+		margin: 0;
+		width: 138px;
+		height: 138px;
+		line-height: 180px;
+		font-family: "myriad-pro";
+		font-size: 18px;
+		font-weight: 400;
+		text-align: center;
+    	text-decoration: none;
+		background: url(../images/detail/buttons-sprite.png) no-repeat -318px -1581px;
+		cursor: pointer;
+	}
+	
+	#shareBut span,
+	#shareButPetition span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	#shareBut	span.shadow,
+	#shareButPetition span.shadow {
+		background: url(../images/detail/buttons-sprite.png) no-repeat 0 -1581px;
+		
+		-moz-transition-duration: 250ms;
+		-webkit-transition-duration: 250ms;
+		-o-transition-duration: 250ms;
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+	}
+	
+	#shareBut.hover	span.shadow,
+	#shareButPetition.hover span.shadow {
+		opacity: 0.5;
+		filter:alpha(opacity=50);
+	}
+	#shareBut.click	span.shadow,
+	#shareButPetition.click span.shadow {
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	
+/* /SHARE BUT */
+
+
+
+/* PLAY AGAIN BUTTON */	
+	
+	#playAgainBut span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../images/detail/buttons-sprite.png) no-repeat 300px 300px;
+	}
+	
+	#playAgainBut span.arrow {
+		background-position: 0px -1422px;
+	}
+	
+	#playAgainBut span.shadow {
+		opacity: 0;
+		filter:alpha(opacity=0);
+		
+		background-position: -318px -1422px;
+	}
+	
+	#playAgainBut.hover span.shadow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+	#playAgainBut.hoverOut span.shadow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 0;
+	}
+
+	#playAgainBut.hover span.arrow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: all;
+		-webkit-transition-property: all;
+		-o-transition-property: all;
+		transition-property: all;
+		
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	
+	#playAgainBut.hoverOut span.arrow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: all;
+		-webkit-transition-property: all;
+		-o-transition-property: all;
+		transition-property: all;
+		
+    -moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	
+	#playAgainBut.click span.shadow {
+		-moz-transition: none;
+		-webkit-transition: none;
+		-o-transition: none;
+		transition: none;
+		
+		-moz-animation-name:	opacityIn;
+		-webkit-animation-name:	opacityIn;
+		-o-animation-name:	opacityIn;
+		animation-name:	opacityIn;
+		
+    -moz-animation-duration: 500ms;
+		-webkit-animation-duration: 500ms !important;
+		-o-animation-duration: 500ms;
+		animation-duration: 500ms;
+		
+		filter:alpha(opacity=50);
+	}
+
+	#playAgainBut.click span.arrow {
+		-moz-transition-duration: 0;
+		-webkit-transition-duration: 0;
+		-o-transition-duration: 0;
+		transition-duration: 0;
+	}
+	
+/* /PLAY AGAIN BUTTON */
+
+
+
+/* SHARE BUTTONS */
+
+	.shareThis .links a {
+		overflow: hidden;
+		float: left;
+		display: block;
+		position: relative;
+		width: 138px;
+		height: 138px;
+		margin-right: 13px;
+		line-height: 180px;
+		font-family: "myriad-pro";
+		font-size: 18px;
+		font-weight: 500;
+		text-align: center;
+		text-decoration: none;
+		color: #fff;
+		
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: color;
+		-webkit-transition-property: color;
+		-o-transition-property: color;
+		transition-property: color;
+	}
+	.shareThis .links a.twitterBut {
+		margin-right: 0;
+	}
+	
+	.shareThis .links a span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		text-indent: 100%;
+	}
+	
+	.shareThis .links a span.ico {
+		background: url(../images/detail/buttons-sprite.png) no-repeat 0px -1740px;
+		opacity: 1;
+	}
+	.shareThis .links a.twitterBut span.ico {
+		background-position: 0 -1899px;
+	}
+	.shareThis .links a.emailBut span.ico {
+		background-position: 0 -2058px;
+	}
+	
+	.shareThis .links a span.shadow {
+		background: url(../images/detail/buttons-sprite.png) no-repeat -159px -1740px;
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	.shareThis .links a.twitterBut span.shadow {
+		background: url(../images/detail/buttons-sprite.png) no-repeat -159px -1899px;
+	}
+	.shareThis .links a.emailBut span.shadow {
+		background: url(../images/detail/buttons-sprite.png) no-repeat -159px -2058px;
+	}
+	
+	
+	.shareThis .links a.hover span.shadow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+	.shareThis .links a.hoverOut span.shadow {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 0;
+	}
+	
+	.shareThis .links a.hover {
+		color: #bebebf;
+	}
+	
+	.shareThis .links a.click span.shadow {
+		-moz-transition-duration: 500ms; 		
+		-webkit-transition-duration: 500ms; 		
+		-o-transition-duration: 500ms; 		
+		transition-duration: 500ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 0.5;
+		filter:alpha(opacity=50);
+	}
+	.shareThis .links a.hover span.ico {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+
+
+/* /SHARE BUTTONS */
+
+
+
+/* CLOSE BUTTON */ 
+	
+	.infoIco span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.infoIco span.shadowIn {
+		background: url(../images/detail/buttons-sprite.png) no-repeat -164px -2217px;
+		opacity: 0;
+		filter:alpha(opacity=0);
+		
+		-moz-transition-duration: 250ms;
+		-webkit-transition-duration: 250ms;
+		-o-transition-duration: 250ms;
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity;
+		-webkit-transition-property: opacity;
+		-o-transition-property: opacity;
+		transition-property: opacity;
+	}
+	
+	.infoIco span.ico {
+		background: url(../images/detail/buttons-sprite.png) no-repeat 0 -2217px;
+		opacity: 1;
+		
+		-moz-transition-duration: 250ms;
+		-webkit-transition-duration: 250ms;
+		-o-transition-duration: 250ms;
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity;
+		-webkit-transition-property: opacity;
+		-o-transition-property: opacity;
+		transition-property: opacity;
+	}
+	
+	a.hover .infoIco span.shadowIn {
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+	a.hoverOut.infoIco span.shadowIn {
+		opacity: 0;
+	}
+	
+	a.click .infoIco span.shadowIn {
+		-moz-transition-duration: 500ms; 		
+		-webkit-transition-duration: 500ms; 		
+		-o-transition-duration: 500ms; 		
+		transition-duration: 500ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		opacity: 0.5;
+		filter:alpha(opacity=50);
+	}
+	a.hover .infoIco span.ico {
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	
+/* /CLOSE BUTTON */
+
+
+
+/* SCROLL BUTTON */
+	
+	@-moz-keyframes growingBut {
+		0%		{ opacity: 0.0; }
+		50%		{ opacity: 0.5; }
+		100%	{ opacity: 0.0; }
+	}
+	@-webkit-keyframes growingBut {
+		0%		{ opacity: 0.0; }
+		50%		{ opacity: 0.5; }
+		100%	{ opacity: 0.0; }
+	}
+	@-o-keyframes growingBut {
+		0%		{ opacity: 0.0; }
+		50%		{ opacity: 0.5; }
+		100%	{ opacity: 0.0; }
+	}
+	@keyframes growingBut {
+		0%		{ opacity: 0.0; }
+		50%		{ opacity: 0.5; }
+		100%	{ opacity: 0.0; }
+	}
+	
+	.faceGrid .scrollBut {
+		display: block;
+		position: fixed;
+		bottom: 26px;
+		left: 50%;
+		z-index: 50;
+		width: 71px;
+		height: 71px;
+		margin-left: -40px;
+		background: url(../images/detail/buttons-sprite.png) no-repeat 0 -2483px;
+		cursor: pointer;
+	}
+	
+	.faceGrid .scrollBut span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		
+		background: url(../images/detail/buttons-sprite.png) no-repeat -184px -2483px;
+		
+		-moz-animation-name:	growingBut;
+		-webkit-animation-name:	growingBut;
+		-o-animation-name:	growingBut;
+		animation-name:	growingBut;
+		
+    -moz-animation-duration: 5000ms;
+		-webkit-animation-duration: 5000ms !important;
+		-o-animation-duration: 5000ms;
+		animation-duration: 5000ms;
+		
+		-moz-animation-iteration-count: infinite;
+		-webkit-animation-iteration-count: infinite;
+		-o-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		
+		opacity: 0.3;
+		filter:alpha(opacity=30);
+	}
+	
+/* /SCROLL BUTTON */
+
+
+
+/* HBO WATER MARK */
+
+	#hboWater {
+		display: block;
+		overflow: hidden;
+		position: fixed;
+		bottom: 25px;
+		right: 28px;
+		z-index: 20;
+		width: 89px;
+		height: 37px;
+		text-indent: 100%;
+		background: url(../images/hbo-water.png) no-repeat 0 -40px;
+		
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+		
+		opacity: 0.35;
+		filter:alpha(opacity=35);
+	}
+	
+	#hboWater:hover {
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+		
+	
+/* /HBO WATER MARK */
+
+
+
+/* NAVIGATION BUTTONS */
+
+	#navigation a span,
+	#navigation a img {
+		opacity: 0.6;
+		
+		-moz-transition-duration: 250ms; 		
+		-webkit-transition-duration: 250ms; 		
+		-o-transition-duration: 250ms; 		
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+	}
+	#navigation a:hover span,
+	#navigation a:hover img {
+		opacity: 0.999;
+	}
+
+/* /NAVIGATION BUTTONS */
+
+
+
+/* FACES BUTTONS */
+
+	.faceGrid .face .desc a {
+		
+	}
+	.faceGrid .face .desc a.directRead {
+		left: 82px;
+	}
+	
+	.faceGrid .face .desc a span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/detail/buttons-sprite.png);
+		background-repeat: no-repeat;
+		
+		-moz-transition-duration: 250ms;
+		-webkit-transition-duration: 250ms;
+		-o-transition-duration: 250ms;
+		transition-duration: 250ms;
+		
+		-moz-transition-property: opacity; 		
+		-webkit-transition-property: opacity; 		
+		-o-transition-property: opacity; 		
+		transition-property: opacity;
+	}
+	
+	.faceGrid .face .desc a span.shadow {
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	
+	
+	.faceGrid .face .desc a.hover span.shadow {
+		opacity: 1;
+		filter:alpha(opacity=100);
+	}
+	.faceGrid .face .desc a.hoverOut span.shadow {
+		opacity: 0;
+	}
+	
+	.faceGrid .face .desc a.click span.shadow {
+		opacity: 0.5;
+		filter:alpha(opacity=50);
+	}
+	.faceGrid .face .desc a.hover span.ico {
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	
+	.faceGrid .face .desc .directPlay .ico {
+		background-position: 0 -2659px;
+	}
+	
+	.faceGrid .face .desc .directPlay .shadow {
+		background-position: -164px -2659px;
+	}
+	
+	.faceGrid .face .desc .directRead .ico {
+		background-position: 0 -2575px;
+	}
+	
+	.faceGrid .face .desc .directRead .shadow {
+		background-position: -164px -2575px;
+	}
+		
+	#faceGrid .textPromo .red .ico {
+		background-position: 0 -2575px;
+	}
+	
+	#faceGrid .textPromo .red .shadow {
+		background-position: -164px -2575px;
+	}
+
+/* /FACES BUTTONS */
+
+
+
+/* ENCYCLOPEDY */
+
+
+	/* PLAY / PAUSE BUTTON */
+
+		.buttonPlay {
+			background-position: 300px 300px;
+		}
+
+		.buttonPlay span,
+		.buttonMute span {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url(../images/detail/buttons-sprite.png) no-repeat 300px 300px;
+
+			-moz-transition-duration: 250ms; 		
+			-webkit-transition-duration: 250ms; 		
+			-o-transition-duration: 250ms; 		
+			transition-duration: 250ms;
+
+			-moz-transition-property: opacity; 		
+			-webkit-transition-property: opacity; 		
+			-o-transition-property: opacity; 		
+			transition-property: opacity;
+		}
+
+		.buttonPlay .ico {
+			background-position: 0 -92px;
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+		.buttonPlay .shadow {
+			background-position: -184px -92px;
+			opacity: 1;
+			filter:alpha(opacity=100);
+		}
+
+		.buttonPlay.paused .ico{
+			background-position: 0 -184px;
+		}
+		.buttonPlay.paused .shadow {
+			background-position: -184px -184px;
+		}
+
+		.buttonPlay.hover .shadow {
+			
+		}
+		.buttonPlay.hover .ico {
+			opacity: 0.5;
+			filter:alpha(opacity=50);
+		}
+
+		.buttonPlay.click .shadow {
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+		.buttonPlay.click .ico {
+			opacity: 1;
+			filter:alpha(opacity=100);
+		}
+		
+		
+		.buttonMute .ico {
+			background-position: -184px -552px;
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+		.buttonMute .shadow {
+			background-position: 0px -552px;
+			opacity: 1;
+			filter:alpha(opacity=100);
+		}
+		
+		.buttonMute.muted .ico {
+			background-position: -184px -644px;
+		}
+		.buttonMute.muted .shadow {
+			background-position: 0px -644px;
+		}
+		
+		.buttonMute.hover .ico {
+			opacity: 0.5;
+			filter:alpha(opacity=50);
+		}
+		
+		.buttonMute.click .shadow {
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+		.buttonMute.click .ico {
+			opacity: 1;
+			filter:alpha(opacity=100);
+		}
+
+	/* /PLAY / PAUSE BUTTON */
+	
+	
+	
+	/* ENCYCLOPEDY */
+	
+		.footer .prevAndNext a span.ico,
+		.footer .prevAndNext a span.shadow {
+			display: block;
+			position: absolute;
+			top: 112px;
+			left: 50px;
+			width: 71px;
+			height: 71px;
+			background-image: url(../images/detail/buttons-sprite.png);
+			background-repeat: no-repeat;
+
+			-moz-transition-duration: 250ms;
+			-webkit-transition-duration: 250ms;
+			-o-transition-duration: 250ms;
+			transition-duration: 250ms;
+
+			-moz-transition-property: opacity; 		
+			-webkit-transition-property: opacity; 		
+			-o-transition-property: opacity; 		
+			transition-property: opacity;
+		}
+		
+		.footer .prevAndNext a.prev span.ico {
+			background-position: 0 -2391px;
+		}
+		.footer .prevAndNext a.prev span.shadow {
+			background-position: -184px -2391px;
+		}
+		
+		.footer .prevAndNext a.next span.ico {
+			left: auto;
+			right: 50px;
+			background-position: 0 -2299px;
+		}
+		.footer .prevAndNext a.next span.shadow {
+			left: auto;
+			right: 50px;
+			background-position: -184px -2299px;
+		}
+
+		.footer .prevAndNext a span.shadow {
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+
+
+		.footer .prevAndNext a.hover span.shadow {
+			opacity: 1;
+			filter:alpha(opacity=100);
+		}
+		.footer .prevAndNext a.hoverOut span.shadow {
+			opacity: 0;
+		}
+
+		.footer .prevAndNext a.click span.shadow {
+			opacity: 0.5;
+			filter:alpha(opacity=50);
+		}
+		.footer .prevAndNext a.hover span.ico {
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+		
+		
+		/* button "all" */
+		.footer .prevAndNext a.all span {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+		.footer .prevAndNext a.all span.ico {
+			background-position: 0 -2986px;
+		}
+		.footer .prevAndNext a.all span.shadow {
+			background-position: -204px -2986px;
+		}
+		
+		.footer .prevAndNext a.hover span.text {
+			color: #2E2E2E;
+		}
+		
+		#years .numbers a span {
+			opacity: 0;
+			filter:alpha(opacity=0);
+			
+			-moz-transition-duration: 250ms;
+			-webkit-transition-duration: 250ms;
+			-o-transition-duration: 250ms;
+			transition-duration: 250ms;
+
+			-moz-transition-property: opacity; 		
+			-webkit-transition-property: opacity; 		
+			-o-transition-property: opacity; 		
+			transition-property: opacity;
+		}
+		
+		#years .numbers a:hover span {
+			opacity: 0.3;
+			filter:alpha(opacity=30);
+		}
+		
+		
+		#years .prev span,
+		#years .next span {
+			-moz-transition-duration: 250ms;
+			-webkit-transition-duration: 250ms;
+			-o-transition-duration: 250ms;
+			transition-duration: 250ms;
+
+			-moz-transition-property: opacity; 		
+			-webkit-transition-property: opacity; 		
+			-o-transition-property: opacity; 		
+			transition-property: opacity;
+		}
+		
+		#years span span.icoA {
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+		
+		#years span span.ico {
+			opacity: 1;
+			filter:alpha(opacity=100);
+		}
+		
+		
+		#years .hover span.icoA {
+			opacity: 1;
+			filter:alpha(opacity=100);
+		}
+		
+		#years .hover span.ico {
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+		
+		#years span span.shadow {
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+		
+		#years .hover span.shadow {
+			opacity: 1;
+			filter:alpha(opacity=100);
+		}
+		
+		#years .click span.shadow {
+			opacity: 0.5;
+			filter:alpha(opacity=50);
+		}
+		
+		#detailPage .page .copyright a span {
+			-moz-transition-duration: 250ms;
+			-webkit-transition-duration: 250ms;
+			-o-transition-duration: 250ms;
+			transition-duration: 250ms;
+
+			-moz-transition-property: opacity; 		
+			-webkit-transition-property: opacity; 		
+			-o-transition-property: opacity; 		
+			transition-property: opacity;
+		}
+		
+		
+		#detailPage .page .copyright a span.ico {
+			background-position: 0 0px;
+		}
+		
+		#detailPage .page .copyright a span.shadow {
+			background-position: -75px 0px;
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+		
+		#detailPage .page .copyright a.hover span.ico,
+		#detailPage .page .copyright a.active span.ico {
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+		#detailPage .page .copyright a.hover span.shadow,
+		#detailPage .page .copyright a.active span.shadow {
+			opacity: 1;
+			filter:alpha(opacity=100);
+		}
+		
+		#detailPage .scrollToShare {
+			-moz-transition-duration: 250ms;
+			-webkit-transition-duration: 250ms;
+			-o-transition-duration: 250ms;
+			transition-duration: 250ms;
+
+			-moz-transition-property: color;
+			-webkit-transition-property: color;
+			-o-transition-property: color;
+			transition-property: color;
+		}
+		
+		#detailPage .scrollToShare span {
+			-moz-transition-duration: 250ms;
+			-webkit-transition-duration: 250ms;
+			-o-transition-duration: 250ms;
+			transition-duration: 250ms;
+
+			-moz-transition-property: opacity; 		
+			-webkit-transition-property: opacity; 		
+			-o-transition-property: opacity; 		
+			transition-property: opacity;
+		}
+		
+		
+		#detailPage .scrollToShare span.ico {
+			background: url(../images/encyclopedy/buttons-sprite.png) no-repeat 0 -75px;
+		}
+		#detailPage .scrollToShare span.shadow {
+			background: url(../images/encyclopedy/buttons-sprite.png) no-repeat -150px -75px;
+			
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+		
+		#detailPage .scrollToShare.hover span.ico {
+			opacity: 0;
+			filter:alpha(opacity=0);
+		}
+		#detailPage .scrollToShare.hover span.shadow {
+			opacity: 1;
+			filter:alpha(opacity=100);
+		}
+		
+		#detailPage .scrollToShare.click span.shadow {
+			opacity: 0.5;
+			filter:alpha(opacity=0.5);
+		}
+		
+		
+		#autoScrollControls .play span {
+			-moz-transition-duration: 250ms;
+			-webkit-transition-duration: 250ms;
+			-o-transition-duration: 250ms;
+			transition-duration: 250ms;
+
+			-moz-transition-property: opacity; 		
+			-webkit-transition-property: opacity; 		
+			-o-transition-property: opacity; 		
+			transition-property: opacity;
+		}
+		
+		#autoScrollControls .play span.ico {
+			background: url(../images/encyclopedy/buttons-sprite.png) no-repeat -150px 0px;
+		}
+		#autoScrollControls .pause span.ico {
+			background: url(../images/encyclopedy/buttons-sprite.png) no-repeat -225px 0px;
+		}
+		
+		#autoScrollControls .play.hover span.ico {
+			opacity: 0.5;
+			filter:alpha(opacity=50);
+		}
+		
+
+		
+	/* /ENCYCLOPEDY */

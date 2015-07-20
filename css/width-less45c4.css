@@ -1,0 +1,40 @@
+@charset "utf-8";
+	
+	.widthLess #detailPage .page .copyright p span {
+		padding-top: 7px;
+		line-height: 28px;
+	}
+
+	.widthLess #detailPage .page .copyright p span br {
+		display: block;
+	}
+
+	.widthLess #detailPage .page.image .text p,
+	.widthLess #detailPage .page.finish .text p {
+		line-height: 35px;
+		font-size: 24px;
+	}
+	.widthLess #detailPage .page.finish .text p {
+		line-height: 42px;
+		font-size: 30px;
+	}
+	
+	.widthLess #detailPage .page.image .text p span.author {
+		padding-top: 20px;
+		line-height: 30px;
+		font-size: 16px;
+	}
+
+
+	
+	.widthLess #detailPage .page.interactive .text p {
+		line-height: 35px;
+		font-family: 'myriad-pro';
+		font-size: 22px;
+	}
+	
+	#detailPage .page.interactive .text p .author {
+		padding-top: 20px;
+		line-height: 30px;
+		font-size: 16px;
+	}

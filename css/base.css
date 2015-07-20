@@ -1,0 +1,1492 @@
+@charset "utf-8";
+
+
+
+/* COMMON */
+
+#embed_npwlo {
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+}
+
+body {
+    position: relative; 
+    min-width: 480px; 
+    min-height: 480px;
+    line-height: 18px; 
+    font-size: 12px;
+    color: #ddd;
+    background-color: #4c4c4c;
+    overflow-x: hidden !important;
+}
+
+body.detail {
+    background-color: #ccc;
+}
+
+body a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+body a:hover {
+    /* TODO */
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#fullscreen {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#turnYourTablet {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    line-height: 800px;
+    font-family: "komu-a";
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #000;
+}
+
+.formValidatorError {
+    display: inline-block;
+    line-height: 36px;
+    font-family: "myriad-pro";
+    font-size: 18px;
+    font-weight: 400;
+    color: #ce0000;
+}
+
+/* spinner */
+.spinner {
+    z-index: 70;
+    background: url(../images/detail/hover-shadow.png) repeat;
+}
+
+.spinner .spinner-content {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: url(../images/ajax-loader.gif) no-repeat 50% 50%;
+}
+
+/* /COMMON */
+
+
+
+/* ERROR */
+
+#errorPage {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    line-height: 800px;
+    font-family: "komu-a";
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #000;
+}
+
+/* /ERROR */
+
+
+
+/* NAVIGATION */
+
+#navigBG {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    background-color: #a4a4a4;
+}
+.detail #navigBG {
+    display: none;
+}
+
+#navigation {
+    position: fixed;
+    top: -38px;
+    left: 0;
+    z-index: 130;
+    width: 100%;
+    height: 38px;
+    background: url(../images/navigation/bg.png) repeat;
+}
+.detail #navigation {
+    top: 0;
+}
+
+#navigation .left {
+    position: relative;
+    float: left;
+    width: auto;
+    padding-left: 5px;
+}
+
+#navigation .right {
+    position: relative;
+    float: right;
+    width: auto;
+    padding-right: 84px;
+}
+
+#navigation a {
+    display: block;
+    margin: 0 10px;
+    padding: 0 5px;
+    line-height: 36px;
+    font-family: 'myriad-pro';
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#navigation .left a {
+    float: left;
+}
+
+#navigation a#hboLogo {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 26px;
+    margin: 0;
+    padding: 11px 0 0 19px;
+}
+
+#navigation a#hboLogo img {
+    display: block;
+}
+
+#navigation a#homeLogo {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 38px;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation a#homeLogo img {
+    display: block;
+}
+
+#navigation a#fanpageLogo {
+    margin-top: 3px;
+    line-height: 33px;
+}
+
+.detail #navigation .left {
+    padding-left: 50px;
+}
+
+.detail #navigation a#homeLogo {
+    display: block;
+}
+
+/* /NAVIGATION */
+
+
+
+/* PAGE LOADING */
+
+#emptyPage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#loadingPage {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    z-index: 150;
+    width: 100%;
+    height: 0;
+}	
+
+#loadingPage .inner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: url(../images/loading-bg.jpg) no-repeat 50% 100%;*/
+    background: rgba(0,0,0,0.7);
+    background-size: cover;
+}
+#loadingPage.white .inner {
+    background: #aaa;
+}
+#loadingPage.white .inner .content {
+    color: #ccc;
+}
+
+#emptyPage .content,
+#loadingPage .content {
+    position: absolute;
+    bottom: 30%;
+    left: 30%;
+    color: #fff;
+}
+
+#emptyPage h1,
+#loadingPage strong {
+    display: block;
+    font-family: "komu-a";
+    font-size: 78px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 90px;
+    text-transform: uppercase;
+}
+
+#emptyPage h1 span,
+#loadingPage strong span {
+    display: block;
+    height: 75px;
+}
+
+#emptyPage p,
+#loadingPage p {
+    height: 96px;
+    padding-top: 60px;
+    line-height: 24px;
+    font-family: "myriad-pro";
+    font-size: 18px;
+}
+
+
+#faceMask {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 20%;
+    height: 256px;
+    background-color: #fff;
+}
+
+#faceMask .mask {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: url(../images/logo-mask.png) center center no-repeat;
+}
+
+#faceMask .face {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../media/images/8.jpg) center 40% no-repeat;
+    background-size: cover;
+}
+
+#faceMask .loading {
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 165px;
+    background-color: #fff;
+}
+
+#faceMask p {
+    position: relative;
+    top: 95%;
+    left: 50%;
+    z-index: 15;
+    width: 500px;
+    margin-left: -250px;
+    line-height: 29px;
+    font-family: "myriad-pro";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+
+/* /PAGE LOADING */
+
+
+
+/* FACE GRID */
+
+#faceGrid {
+    opacity: 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;;
+}
+
+#faceGrid.onTop {
+    z-index: 20;
+}
+
+#faceGrid .face {
+    display: block;
+    float: left;
+    position: relative;
+    width: 20%;
+    min-width: 245px;
+    min-height: 294px;
+    background: transparent no-repeat center center;
+    background-size: cover;
+    visibility: hidden;
+    text-decoration: none;
+    cursor: default;
+
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+#faceGrid .face.clicked > .shadow {
+    opacity: 1 !important;
+}
+#faceGrid .face.clicked > .default {
+    opacity: 0 !important;
+}
+
+#faceGrid .face.imgAlign40 {
+    background-position: center 40%;
+}
+#faceGrid .face.imgAlign0 {
+    background-position: center 0%;
+}
+
+.faceGrid .face .shadow {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/grid-hover-shadow.png) repeat;
+}
+
+.faceGrid .face .active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.faceGrid .face .desc {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 210px;
+    margin: -120px 0 0 -100px;
+    padding: 10px 10px 5px 10px;
+    line-height: 21px;
+    font-family: "myriad-pro";
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.faceGrid .face .desc strong {
+    display: block;
+    padding-bottom: 0px;
+    line-height: 36px;
+    font-family: "komu-a";
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.faceGrid .face .desc a {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    width: 61px;
+    height: 61px;
+    text-indent: 110%;
+}
+.faceGrid .face .desc a.directRead {
+    left: 82px;
+}
+
+.faceGrid .face .startShadow .desc {
+    background: none;
+}
+
+.faceGrid .face .startShadow .desc span {
+    display: none;
+}
+
+/* empty */
+#faceGrid .face.emptyBox,
+#faceGrid .face.commingSoon {
+    visibility: visible;
+    background: url(../images/grid-empty-shadow.png) no-repeat top right;
+    background-size: 100% 100%;
+}
+
+#faceGrid .face.commingSoon > .shadow {
+    opacity: 0;
+}
+
+#faceGrid .textPromo .white {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(255,255,255,0.4);
+}
+
+#faceGrid .textPromo .white .desc {
+    width: 200px;
+    padding-right: 0px;
+}
+
+#faceGrid .textPromo .white h2 {
+    line-height: 36px;
+    font-family: 'komu-a';
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    color: #333333;
+}
+
+#faceGrid .textPromo .white a {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 61px;
+    height: 61px;
+    background: url(../images/detail/buttons-sprite.png) no-repeat 0 -2745px;
+}
+
+#faceGrid .textPromo .red {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+#faceGrid .textPromo .red p {
+    line-height: 21px;
+    font-family: 'myriad-pro';
+    font-size: 14px;
+
+}
+
+#faceGrid .textPromo .red a {
+    overflow: hidden;
+    text-indent: 110%;
+}
+
+/* /FACE GRID */
+
+
+
+/* PROMO OVERLAY */
+
+#promo {
+    display: none;
+}
+
+#faceGrid .commingSoon .directRead {
+    left: 10px;
+}
+
+#promoOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    background: url("../images/promo-shadow.png") repeat;
+}
+#promoOverlay.visible {
+    display: block;
+}
+
+#promoOverlay h2 {
+    padding: 70px 0 0 140px;
+    line-height: 66px;
+    font-family: "komu-a";
+    font-size: 72px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#promoOverlay p {
+    width: 800px;
+    padding: 40px 0 10px 140px;
+    line-height: 36px;
+    font-family: "myriad-pro";
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+}
+
+#promoOverlay p.small {
+    padding-top: 10px;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+#promoOverlay form {
+    margin: 0 0 0 90px;
+    padding: 20px 0 115px 50px;
+    width: 600px;
+}
+
+#promoOverlay form label {
+    display: block;
+    width: 390px;
+    line-height: 24px;
+    font-family: "myriad-pro";
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+}
+
+#promoOverlay form input {
+    display: block;
+    position: absolute;
+    top: 484px;
+    left: 140px;
+    width: 355px;
+    height: 67px;
+    padding: 0 10px;
+    line-height: 67px;
+    font-family: "myriad-pro";
+    font-size: 24px;
+    font-weight: 300;
+    color: #222;
+    background-color: #fff;
+    border: none;
+}
+
+#promoOverlay form input.button {
+    display: block;
+    position: absolute;
+    top: 446px;
+    left: 545px;
+    width: 138px;
+    height: 138px;
+    padding: 30px 0 0 0;
+    line-height: 67px;
+    font-family: "myriad-pro";
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    background: url(../images/detail/buttons-sprite.png) no-repeat -318px -1740px;
+    cursor: pointer;
+}
+
+#promoOverlay form input.button:hover,
+#promoOverlay form input.button:hover {
+    background-position: -318px -1899px;
+}
+
+#promoOverlay .formValidatorError {
+    padding-top: 66px;
+}
+
+#promoOverlay .closeBut {
+    position: fixed;
+    top: 28px;
+    right: 28px;
+}
+
+#promoOverlay .spinner .spinner-content {
+    background-position: 61% 53%;
+}
+
+#promoOverlay .result {
+    display: none;
+    position: absolute;
+    top: 397px;
+    left: 140px;
+    line-height: 60px;
+    font-family: "myriad-pro";
+    font-size: 36px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* /PROMO OVERLAY */
+
+
+
+/* VIDEO */
+
+#videoStillOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    /* background: url(../images/detail/hover-shadow.png) repeat; */
+}
+
+#videoPanel {
+    position: absolute;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: url(../images/detail/hover-shadow.png) repeat;
+}
+
+
+#closeBut {
+    position: absolute;
+    float: none;
+    top: 72px;
+    right: 28px;
+    z-index: 20;
+    margin: 0;	
+}
+
+#videoPanel .closeDetailBut {
+    display: none;
+    float: none;
+    position: fixed;
+    top: 72px;
+    right: 28px;
+    margin: 0;
+    cursor: pointer;
+}
+
+#videoPanel .play {
+    top: 58px;
+    width: 138px;
+    height: 138px;
+}
+
+#videoContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+}
+
+#videoContainer video {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 948px;
+    height: 490px;
+}
+
+#imgPoster {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: transparent no-repeat 50% 50%;
+    background-size: cover;
+}
+
+#imgPoster .shadow {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/detail/hover-shadow.png") repeat;
+}
+
+#imgPoster a.bigPlayBut {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 138px;
+    height: 138px;
+    margin: -49px 0 0 -69px;
+    background: url(../images/detail/buttons-sprite.png) no-repeat -318px -2058px;
+    cursor: pointer;
+}
+
+#imgPoster a.closeBut {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+}
+
+#subtitle {
+    overflow: hidden;
+    position: absolute;
+    bottom: 75px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+
+    text-shadow: 0px -1px 0px #000000;
+
+    -moz-transition: all 300ms ease-in;
+    -webkit-transition: all 300ms ease-in;
+    -o-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
+}
+#subtitle.hidden {
+    display: none !important;
+}
+
+#subtitle.moving {
+    -moz-transition: all 300ms ease-out;
+    bottom: 170px;
+}
+
+
+
+/* VIDEO INFO */
+
+.videoInfo {
+    position: absolute;
+    top: 66px;
+    left: 150px;
+    min-width: 630px;
+    max-width: 810px;
+    padding-right: 180px;
+    height: 330px;
+    line-height: 36px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.videoInfo h1 {
+    display: block;
+    overflow: visible;
+    position: relative;
+    height: 140px;
+    padding-left: 10px;
+    line-height: 74px;
+    font-family: "komu-a";
+    font-size: 72px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.videoInfo strong {
+    padding-left: 10px;
+    font-family: "myriad-pro";
+    font-weight: 400;
+}
+
+.videoInfo .links {
+    margin-top: 45px;
+}
+
+.videoInfo .links a.showRelatedBut {
+    display: none;
+}
+
+
+.readMore {
+    display: none;
+    position: relative;
+    max-width: 810px;
+    padding: 60px 0 24px 10px;
+    line-height: 36px;
+    font-size: 24px;
+}
+
+.readMore p {
+    font-family: "myriad-pro";
+    font-weight: 300;
+    padding-bottom: 36px;
+}
+
+.readMore p strong {
+    padding-left: 0;
+}
+
+/* /VIDEO INFO */
+
+
+
+/* RELATED (END PAGE) */
+
+#videoPanel .related {
+    display: none;
+    position: absolute;
+    top: 268px;
+    left: 150px;
+}
+
+#videoPanel .related h2 {
+    line-height: 72px;
+    font-family: "myriad-pro";
+    font-size: 24px;
+    color: #fff;
+}
+
+#videoPanel .related p.shortInfo {
+    width: 540px;
+    padding: 30px 0 0 10px;
+    line-height: 24px;
+    font-family: "myriad-pro";
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#videoPanel .related p.shortInfo span {
+    position: relative;
+    display: block;
+}
+
+#videoPanel .related p.shortInfo span.more {
+
+}
+
+#videoPanel .related p.shortInfo a {
+    display: block;
+}
+
+
+
+/* /RELATED (END PAGE) */	
+
+
+
+#videoPanel .shareThis {
+    display: none;
+    position: absolute;
+    top: 263px;
+    left: 50%;
+    width: 440px;
+    margin-left: -220px;
+}
+
+#detailShadow {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/detail/detail-shadow.png) repeat;
+}
+
+/* VIDEO PANEL is HIDDEN */
+
+#videoPanel.notMoving .shareThis,
+#videoPanel.notMoving .related,
+#videoPanel.notMoving .videoInfo,
+#videoPanel.notMoving #shareBut,
+#videoPanel.notMoving #videoControl,
+#videoPanel.notMoving #closeBut {
+    display: none !important;
+}
+
+/* VIDEO PANEL is HIDDEN */
+
+
+/* slider */
+
+#line2 {
+    position:absolute; 
+    bottom:0; 
+    left: 0;
+    width: 100%;
+    height: 28px;
+}
+
+#progresses_bar { 
+    position:relative;
+    z-index: 15;
+    width: 100%; 
+    height: 100%; 
+    background: url(../images/detail/progress-bar.png) repeat;
+}
+
+#play_slider {
+    overflow: hidden;
+    position: absolute;
+    top:0; 
+    left: 0;
+    z-index: 15;
+    width:100%;
+    height:100%;
+    background:none;
+    cursor: pointer;
+}
+
+#line2 .time {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: auto;
+    height: 28px;
+    line-height: 28px;
+    font-family: "myriad-pro";
+    font-size: 18px;
+    text-align: right;
+}
+
+#durationTimeContainer {
+    color: #000;
+}
+
+#line2 #currentTimeContainer {
+    width: auto;
+    color: #000;
+}
+
+#sliderBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 28px;
+    padding: 0;
+    background: url(../images/detail/slider-bg.png) no-repeat top right;
+}
+
+#knob_slider {
+    position: relative;
+    width: 1px;
+    height: 28px;
+}
+
+#knob_slider span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+}
+
+
+#videoControl .center {
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    min-width: 238px;
+    width: auto;
+    height: 71px;
+    margin-left: -123px;
+    font-size: 0;
+}
+
+#videoControl .left {
+    position: absolute;
+    bottom: 55px;
+    left: 150px;
+    width: 238px;
+    height: 71px;
+    font-size: 0;
+    text-align: right;
+}
+
+#videoControl .right {
+    position: absolute;
+    bottom: 55px;
+    right: 28px;
+    width: 238px;
+    height: 71px;
+    font-size: 0;
+    text-align: right;
+}
+
+
+
+div#progresses_bar div#load { 
+    position:absolute; 
+    top:0; 
+    left: 0;
+    width:100%; 
+    height:100%; 
+    background:none;   
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+div#progresses_bar div#load #progress-bar-box-id {
+    width:100%;
+    height:100%;
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+div#progresses_bar div#load.preloading #progress-bar-box-id  {
+    display: none;
+}
+
+div#progresses_bar div#load #progress-bar-box-id #progress-bar-percentage-id {
+    height:100%; 
+    background-color: #00d8ff; 
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+#waterMark {
+    display: block;
+    position: absolute;
+    top: 65px;
+    left: 28px;
+    width: 87px;
+    height: 63px;
+    background: url(../images/water-mark.png) no-repeat;
+}
+
+
+
+
+/* ABOUT PROJECT and ABOUT MOVIE*/
+
+#aboutOverlay,
+#aboutMovieOverlay,
+#aboutJoinUs,
+#sharePetition {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 25;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: url("../images/promo-shadow.png") repeat;
+}
+
+#videoPanel #aboutJoinUs {
+    z-index: 30;
+}
+
+#videoPanel #aboutJoinUs .closeBut {
+    top:72px;
+}
+
+#aboutOverlay .closeBut,
+#aboutMovieOverlay .closeBut,
+#aboutJoinUs .closeBut {
+    position: fixed;
+    top: 64px;
+    right: 48px;
+}
+
+#aboutOverlay #aboutProject,
+#aboutMovieOverlay #aboutMovie,
+#aboutJoinUs #joinUs {
+    display: block;
+}
+
+#aboutProject,
+#aboutMovie,
+#joinUs {
+    display: none;
+    position: relative;
+    min-width: 630px;
+    max-width: 760px;
+    padding: 66px 0 0 150px;
+    color: #fff;
+}
+
+#aboutProject strong,
+#aboutMovie strong,
+#joinUs strong {
+    padding-left: 10px;
+    line-height: 36px;
+    font-family: "myriad-pro";
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#aboutProject strong.headline,
+#aboutMovie strong.headline,
+#joinUs strong.headline {
+    display: block;
+    height: 140px;
+    padding-left: 10px;
+    line-height: 74px;
+    font-family: "komu-a";
+    font-size: 72px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#joinUs strong.headline {
+    height: 58px;
+}
+
+#joinUs strong.strongLine {
+    display: block;
+    height: 60px;
+    padding: 31px 0px 16px 0px;
+    line-height: 60px;
+    font-family: "komu-a";
+    font-weight: normal;
+    font-size: 36px;
+    letter-spacing: 0.5px;
+}
+
+#joinUs .result {
+    position: relative;
+    display: none;	
+}
+
+#joinUs .result strong {
+    display: block;
+    height: 60px;
+    padding: 31px 0px 70px 0px;
+    line-height: 45px;
+    font-family: "komu-a";
+    font-weight: normal;
+    font-size: 36px;
+    letter-spacing: 0.5px;
+}
+
+#joinUs .result #shareBut,
+#joinUs .result #shareButPetition {
+    position: absolute;
+    top: 0px;
+    right: 102px;
+}
+
+#sharePetition #detailShadow {
+    z-index: 22;
+}
+
+#sharePetition .shareThis {
+    z-index: 25;
+    position: absolute;
+    top: 263px;
+    left: 50%;
+    width: 440px;
+    margin-left: -220px;
+}
+
+#sharePetition .closeBut {
+    position: fixed;
+    top: 28px;
+    right: 28px;
+    z-index: 35;
+}
+
+#aboutProject .moreContent,
+#aboutMovie .moreContent,
+#joinUs .moreContent {
+    position: relative;
+    max-width: 810px;
+    padding: 60px 80px 48px 10px;
+    line-height: 36px;
+    font-size: 24px;
+}
+
+#joinUs .moreContent {
+    padding-top: 30px;
+    font-size: 18px;
+}
+
+#aboutProject .moreContent p,
+#aboutMovie .moreContent p,
+#joinUs .moreContent p {
+    font-family: "myriad-pro";
+    font-weight: 300;
+    padding-bottom: 36px;
+}
+
+/* join us - petice  */	
+#joinUs input {
+    display: block;
+    width: 340px;
+    height: 60px;
+    padding: 0 15px;
+    line-height: 60px;
+}
+
+#joinUs label {
+    display: block;
+    font-size: 18px;
+    font-family: "myriad-pro";
+    font-weight: 300;
+}
+
+#joinUs form {
+    margin-bottom: 60px;
+}
+
+#joinUs form p {
+    position: relative;
+}
+
+#joinUs form input.button {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 100px;
+    width: 138px;
+    height: 138px;
+    padding: 30px 0 0 0;
+    line-height: 67px;
+    font-family: "myriad-pro";
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    background: url(../images/detail/buttons-sprite.png) no-repeat -318px -1740px;
+    border: none;
+    cursor: pointer;
+}
+
+#joinUs form input.button:hover {
+    background-position: -318px -1899px;
+}
+
+#joinUs.petitionForm form input.button {
+    background: url(../images/detail/buttons-sprite.png) no-repeat 0px -3190px;
+}
+
+#joinUs.petitionForm form input.button:hover {
+    background: url(../images/detail/buttons-sprite.png) no-repeat -159px -3190px;
+}
+
+
+
+
+/* /ABOUT PROJECT and ABOUT MOVIE */
+
+
+
+/* SMART PHONE PAGE */
+
+#smartPhoneCover {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: url(../images/smartphone-cover.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+/* SMART PHONE PAGE */
+
+
+
+/* END BG */
+
+#endBG {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #aaa;
+}
+
+/* /END BG */
+
+
+
+/* BOOKMARKS */
+
+#bookmarks {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 0;
+}
+
+#bookmarks span.bookmark {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 21px;
+    height: 28px;
+    margin-left: -10px;
+}
+
+#bookmarks span.bookmark span {
+    display: block;
+    width: 1px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+#bookmarkBubble {
+    display: none;
+    position: absolute;
+    bottom: 28px;
+    width: auto;
+    height: auto;
+    max-width: 260px;
+    margin-left: -22px;
+    padding: 15px;
+    line-height: 20px;
+    font-family: "myriad-pro";
+    font-size: 16px;
+    font-weight: 300;
+    color: #666666;		
+    background-color: #fff;
+}
+
+#bookmarkBubble .arrow {
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 17px;
+    width: 11px;
+    height: 5px;
+    background: url(../images/detail/bookmark-arrow.png) no-repeat;
+}
+
+/* /BOOKMARKS */
+
+
+
+/* OSX HACK */
+
+.OSX .videoInfo h1 {
+    padding-top: 7px;
+}
+
+/* /OSX HACK */
+.img-responsive{
+    width: 100%;
+}
+.title-suscribe{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+    line-height: 1.5;
+    font-weight: 200;
+    max-width:80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: "myriad-pro";
+}
+.btn-circle{
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    background:transparent;
+}
+.btn-circle > span{
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 0px;
+    color: white;
+}
+.btn-circle:hover{
+    background: transparent;
+}
+.suscription{
+transition: 0.5s all;
+    width: 100%;	
+    height: 0px;
+    position: fixed;
+    background: rgba(0,0,0,0.7);
+    z-index: 999;
+    overflow:hidden;
+       top: 0px;
+}
+.activar{
+    height: 100%;
+ 
+}
+div.form{
+    margin-top: 15%;
+    
+}
+div.form >  .fa {
+    float: right !important;
+    clear:both;
+    text-align: right;
+    
+}
+div.form > .des{
+    text-align: justify;
+    clear: both;
+    position: relative;
+    display: block;
+}
+.icon1{
+    margin-top: 230px;
+}
+.suscribe{
+    color: white !important;
+    opacity: 1.0;
+    
+}
+.suscribe .shadow{
+    background: rgba(0,0,0,0.7) !important;
+}
