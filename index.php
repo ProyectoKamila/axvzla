@@ -96,6 +96,15 @@
                         </span>
                     </span>
                 </div>
+                <div class="face imgAlign0 suscribe" data-img-url="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xtp1/v/t1.0-9/11703084_1134890123204678_1581984632772904136_n.jpg?oh=aca57e0f9ad0a0f1c2ff8a33a77248cb&oe=564DC882&__gda__=1444473252_e80e4ca179fba743b025af7947175b40" style="background: url(<?php bloginfo('template_url'); ?>/images/isologo.jpg)  center no-repeat; background-size: cover;" >
+                    <span class="shadow" style="">
+                        
+                            <span class="desc">
+                                Copyright &copy; Artistas por Venezuela 2015.<br/>
+                                <span>Desarrollado por <strong>Proyecto Kamila C.A</strong></span>
+                        </span>
+                    </span>
+                </div>
 
                 <div class="clear"></div>		
             </div>	<!-- /#faceGrid -->
